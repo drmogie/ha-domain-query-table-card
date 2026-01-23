@@ -1,49 +1,68 @@
-# ha-domain-query-table-card
+# HA Domain Query Table Card
 
-A Home Assistant Lovelace custom card that reads `?domain=<domain>` from the dashboard URL and renders:
+[![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](#)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-- **Table mode**: a sortable, resizable entity table for that domain
-- **Index mode**: a one-column domain index with entity counts
+A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL to display:
 
-## Features
-- URL-driven (`?domain=`)
-- Sortable columns
-- Resizable columns (drag header separators)
-- Hide `unknown` / `unavailable` states
-- Click an entity row to open **more-info**
-- YAML + UI editor support
+- A **sortable, resizable entity table** for a domain
+- Or a **domain index** with entity counts
+
+---
+
+## Screenshots
+
+### Add card to dashboard
+![Add card](images/add-to-dashboard.png)
+
+### Config – Index mode
+![Index mode](images/config-index-mode.png)
+
+### Config – Table mode
+![Table mode](images/config-table-mode.png)
 
 ---
 
 ## Installation
 
-### Option A — HACS (Automatic)
-1. In Home Assistant, go to **HACS → Frontend**.
-2. Click **⋮ → Custom repositories**.
+### HACS (Recommended)
+1. Open **HACS → Frontend**
+2. Click **⋮ → Custom repositories**
 3. Add this repository:
-   - **Repository**: *(paste this GitHub repo URL)*
+   - **Repository**: *(this GitHub repo URL)*
    - **Category**: `Lovelace`
-4. Find **ha-domain-query-table-card** in HACS and click **Download**.
-5. Restart Home Assistant (or reload resources if prompted).
-6. Add the Lovelace resource (**Settings → Dashboards → Resources**):
-   - URL: `/hacsfiles/ha-domain-query-table-card/ha-domain-query-table-card.js`
-   - Type: `JavaScript Module`
+4. Download **HA Domain Query Table Card**
+5. Restart Home Assistant (or reload resources if prompted)
 
-> HACS installs frontend files under `/hacsfiles/`.
+#### Add the Resource (Required)
+Go to **Settings → Dashboards → Resources** and add:
 
-### Option B — Manual
-1. Copy these files into your HA config:
+- **URL**:  
+  ```
+  /hacsfiles/ha-domain-query-table-card/ha-domain-query-table-card.js
+  ```
+- **Type**: `JavaScript Module`
+
+---
+
+### Manual Installation
+1. Copy these files into your Home Assistant config:
    - `ha-domain-query-table-card.js`
    - `ha-domain-query-table-card-editor.js`
 
-   Recommended folder:
+   Recommended location:
    ```
    /config/www/ha-domain-query-table-card/
    ```
 
-2. Add the Lovelace resource (**Settings → Dashboards → Resources**):
-   - URL: `/local/ha-domain-query-table-card/ha-domain-query-table-card.js`
-   - Type: `JavaScript Module`
+2. Add the Lovelace resource:
+
+   - **URL**:
+     ```
+     /local/ha-domain-query-table-card/ha-domain-query-table-card.js
+     ```
+   - **Type**: `JavaScript Module`
 
 3. Refresh your browser.
 
@@ -51,31 +70,36 @@ A Home Assistant Lovelace custom card that reads `?domain=<domain>` from the das
 
 ## Usage
 
-### Table mode
-Add the card:
-
+### Table Mode
 ```yaml
 type: custom:ha-domain-query-table-card
 mode: table
 ```
 
-Then open the dashboard with a URL query string like:
-
+Open your dashboard with:
 ```
-/lovelace/0?domain=switch
+?domain=switch
 ```
 
-The card will show entities matching `switch.*`.
-
-### Index mode
-Index mode shows a list of domains and counts. Clicking a domain updates `?domain=` in the URL.
-
+### Index Mode
 ```yaml
 type: custom:ha-domain-query-table-card
 mode: index
 ```
 
+Clicking a domain updates the URL query string.
+
+---
+
+## Features
+- URL-driven (`?domain=`)
+- Sortable columns
+- Drag-to-resize columns
+- Hide `unknown` / `unavailable` states
+- Click entity rows for **more-info**
+- UI editor support
+
 ---
 
 ## License
-MIT (see `LICENSE`)
+MIT — see [LICENSE](LICENSE)
