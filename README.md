@@ -31,7 +31,7 @@ A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL 
 Install directly from HACS using the button below:
 
 [![Open your Home Assistant instance and open the repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](
-https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAME&repository=ha-domain-query-table-card&category=frontend
+https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=ha-domain-query-table-card&category=frontend
 )
 
 #### Manual HACS steps (optional)
@@ -39,7 +39,7 @@ https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAM
 2. Go to **Frontend**
 3. Open the three-dot menu (⋮) → **Custom repositories**
 4. Add:
-   - **Repository**: `https://github.com/YOUR_GITHUB_USERNAME/ha-domain-query-table-card`
+   - **Repository**: `https://github.com/drmogie/ha-domain-query-table-card`
    - **Category**: `Frontend`
 5. Install **HA Domain Query Table Card**
 6. Restart Home Assistant if prompted
