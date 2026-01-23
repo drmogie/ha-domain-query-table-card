@@ -50,7 +50,7 @@ https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAM
 
 After installing with HACS, add the Lovelace resource:
 
-[![Open Dashboard Resources](https://my.home-assistant.io/badges/dashboard_resources.svg)](
+[![Open Home Assistant](https://my.home-assistant.io/badges/lovelace_resources.svg)](
 https://my.home-assistant.io/redirect/lovelace_resources/
 )
 
