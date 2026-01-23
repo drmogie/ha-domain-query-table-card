@@ -1,7 +1,7 @@
 # HA Domain Query Table Card
 
-[![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](#)
+[![HACS](https://img.shields.io/badge/HACS-Frontend-orange.svg)](https://hacs.xyz)
+[![Install via HACS](https://img.shields.io/badge/HACS-Install-blue.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAME&repository=ha-domain-query-table-card&category=frontend)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL to display:
@@ -27,27 +27,45 @@ A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL 
 ## Installation
 
 ### HACS (Recommended)
-1. Open **HACS → Frontend**
-2. Click **⋮ → Custom repositories**
-3. Add this repository:
-   - **Repository**: *(this GitHub repo URL)*
-   - **Category**: `Lovelace`
-4. Download **HA Domain Query Table Card**
-5. Restart Home Assistant (or reload resources if prompted)
 
-#### Add the Resource (Required)
-Go to **Settings → Dashboards → Resources** and add:
+Install directly from HACS using the button below:
 
-- **URL**:  
-  ```
-  /hacsfiles/ha-domain-query-table-card/ha-domain-query-table-card.js
-  ```
-- **Type**: `JavaScript Module`
+[![Open your Home Assistant instance and open the repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](
+https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAME&repository=ha-domain-query-table-card&category=frontend
+)
+
+#### Manual HACS steps (optional)
+1. Open **HACS**
+2. Go to **Frontend**
+3. Open the three-dot menu (⋮) → **Custom repositories**
+4. Add:
+   - **Repository**: `https://github.com/YOUR_GITHUB_USERNAME/ha-domain-query-table-card`
+   - **Category**: `Frontend`
+5. Install **HA Domain Query Table Card**
+6. Restart Home Assistant if prompted
 
 ---
 
-### Manual Installation
-1. Copy these files into your Home Assistant config:
+## Add the Resource (Required)
+
+After installing with HACS, add the Lovelace resource:
+
+[![Open Dashboard Resources](https://my.home-assistant.io/badges/dashboard_resources.svg)](
+https://my.home-assistant.io/redirect/lovelace_resources/
+)
+
+```yaml
+resources:
+  - url: /hacsfiles/ha-domain-query-table-card/ha-domain-query-table-card.js
+    type: module
+```
+
+---
+
+## Manual Installation (No HACS)
+
+1. Copy these files into your HA config:
+
    - `ha-domain-query-table-card.js`
    - `ha-domain-query-table-card-editor.js`
 
@@ -58,11 +76,11 @@ Go to **Settings → Dashboards → Resources** and add:
 
 2. Add the Lovelace resource:
 
-   - **URL**:
-     ```
-     /local/ha-domain-query-table-card/ha-domain-query-table-card.js
-     ```
-   - **Type**: `JavaScript Module`
+```yaml
+resources:
+  - url: /local/ha-domain-query-table-card/ha-domain-query-table-card.js
+    type: module
+```
 
 3. Refresh your browser.
 
