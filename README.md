@@ -1,7 +1,7 @@
 # HA Domain Query Table Card
 
 [![HACS](https://img.shields.io/badge/HACS-Frontend-orange.svg)](https://hacs.xyz)
-[![Install via HACS](https://img.shields.io/badge/HACS-Install-blue.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=YOUR_GITHUB_USERNAME&repository=ha-domain-query-table-card&category=frontend)
+[![Install via HACS](https://img.shields.io/badge/HACS-Install-blue.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=ha-domain-query-table-card&category=plugin)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL to display:
@@ -31,7 +31,7 @@ A Home Assistant Lovelace custom card that uses `?domain=` in the dashboard URL 
 Install directly from HACS using the button below:
 
 [![Open your Home Assistant instance and open the repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](
-https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=ha-domain-query-table-card&category=frontend
+https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=ha-domain-query-table-card&category=plugin
 )
 
 #### Manual HACS steps (optional)
@@ -64,10 +64,9 @@ resources:
 
 ## Manual Installation (No HACS)
 
-1. Copy these files into your HA config:
+1. Copy this file into your HA config:
 
    - `ha-domain-query-table-card.js`
-   - `ha-domain-query-table-card-editor.js`
 
    Recommended location:
    ```
