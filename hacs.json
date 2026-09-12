@@ -1,5 +1,5 @@
 {
-  "name": "ha-domain-query-table-card",
+  "name": "HA Domain Query Table Card",
   "content_in_root": true,
   "render_readme": true,
   "domains": ["lovelace"]
