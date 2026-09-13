@@ -1,4 +1,4 @@
-# HA Domain Query Table Card
+# Domain Query Table Card
 
 [![HACS](https://img.shields.io/badge/HACS-Frontend-orange.svg)](https://hacs.xyz)
 [![Install via HACS](https://img.shields.io/badge/HACS-Install-blue.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=ha-domain-query-table-card&category=plugin)
@@ -41,7 +41,7 @@ https://my.home-assistant.io/redirect/hacs_repository/?owner=drmogie&repository=
 4. Add:
    - **Repository**: `https://github.com/drmogie/ha-domain-query-table-card`
    - **Category**: `Frontend`
-5. Install **HA Domain Query Table Card**
+5. Install **Domain Query Table Card**
 6. Restart Home Assistant if prompted
 
 ---

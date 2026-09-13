@@ -947,6 +947,6 @@ customElements.define("ha-domain-query-table-card", HaDomainQueryTableCard);
 window.customCards = window.customCards || [];
 window.customCards.push({
   type: "ha-domain-query-table-card",
-  name: "HA Domain Query Table Card",
+  name: "Domain Query Table Card",
   description: "Uses ?domain= in the URL to show a sortable entity table, or an index of domains.",
 });
