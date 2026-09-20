@@ -1,6 +1,6 @@
 /* /local/ha-domain-query-table-card/ha-domain-query-table-card.js
  *
- * Version: 2026.09.12.1
+ * Version: 2026.09.20.01
  *
  * Combined build: card + GUI config editor in a single file.
  *
@@ -115,7 +115,7 @@ class HaDomainQueryTableCardEditor extends LitElement {
 
           <ha-switch
             .checked=${isIndex}
-            @change=${this._valueChanged}
+            @change=${(ev) => this._valueChanged(ev)}
             aria-label="Mode"
           ></ha-switch>
 
@@ -340,7 +340,7 @@ class HaDomainQueryTableCard extends LitElement {
     const title = goingTo === MODE_INDEX ? "Switch to index" : "Switch to table";
 
     return html`
-      <button class="swap-btn" type="button" title=${title} @click=${this._toggleViewMode}>
+      <button class="swap-btn" type="button" title=${title} @click=${() => this._toggleViewMode()}>
         <ha-icon class="swap-ico" icon=${icon}></ha-icon>
         <span class="swap-text">${label}</span>
       </button>
@@ -366,13 +366,13 @@ class HaDomainQueryTableCard extends LitElement {
 
         <div class="row2-right">
           <ha-formfield label="Hide unknown">
-            <ha-checkbox .checked=${this._hideUnknown} @change=${this._onHideUnknownChanged}></ha-checkbox>
+            <ha-checkbox .checked=${this._hideUnknown} @change=${(ev) => this._onHideUnknownChanged(ev)}></ha-checkbox>
           </ha-formfield>
 
           <ha-formfield label="Hide unavailable">
             <ha-checkbox
               .checked=${this._hideUnavailable}
-              @change=${this._onHideUnavailableChanged}
+              @change=${(ev) => this._onHideUnavailableChanged(ev)}
             ></ha-checkbox>
           </ha-formfield>
         </div>
